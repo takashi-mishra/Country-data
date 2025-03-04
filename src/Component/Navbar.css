@@ -1,0 +1,372 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1rem 0;
+}
+/* Base navbar styling */
+.navbar {
+  background-color: #333;
+  height: 6vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.navbar h1 {
+  color: white;
+}
+
+/* Navigation Links */
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  gap: 3vw;
+  list-style-type: none;
+}
+
+.navbar ul li a {
+  position: relative;
+  color: white;
+  font-size: 2vh;
+  font-weight: 100;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+.navbar ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #1abc9c; /* Teal accent color */
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger svg {
+  font-size: 24px;
+  color: white;
+}
+
+#Banner{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3vw;
+  height: 30vh;
+  width: 100%;
+  background: linear-gradient(to right,rgba(211, 50, 50, 0.582),rgba(211, 211, 27, 0.945));
+}
+
+.Banner-image{
+  width: 26vw;
+  height: 28vh;
+}
+
+.Banner-image img{
+  width: 100%;
+  height: 100%;
+}
+
+
+.text button{
+  margin-top: 1vh;
+  background: #f39c12;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(255, 75, 43, 0.3);
+}
+
+.footer {
+  margin-top: 1vh;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px; /* Space between cards */
+}
+
+#card {
+  flex-basis: calc(20% - 24px); /* Each card takes 25% width minus the gap space */
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#card img{
+  height: 20vh;
+  width: 16vw;
+  border-radius:10px 10px 10px 10px ;
+  object-fit: cover;
+}
+
+#title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form Container */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-left: 40%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+/* Form Heading */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Input and Textarea Styles */
+input[type="text"], input[type="password"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Textarea Specific Styles */
+textarea {
+  resize: vertical;
+}
+
+/* Button Styles */
+#btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #5c67f2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+#btn:hover {
+  background-color: #4750cc;
+}
+
+#card-banner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#count-card {
+  flex:calc(25% - 10px); /* Each box will take 25% width */
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#count-card img {
+ width: 12vw;
+ height: 16vh;
+  margin-top: 1vh;
+  object-fit: cover;
+}
+
+#input{
+  position: relative;
+  left: 40%;
+  margin-top: 2vh;
+  width: 22vw;
+  height: 4vh;
+  border-radius: 22px;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  form {
+      padding: 15px;
+  }
+
+  button {
+      padding: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  #card-container {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  #card {
+    flex-basis: calc(50% - 20px); /* For smaller screens, 2 cards per row */  
+  }
+
+  #count-card{
+    flex-basis: calc(50% - 20px);
+  }
+
+  #count-card img {
+   width: 60%;
+   }
+
+   #input{
+    width: 80%;
+   left:6% ;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    width: 200px;
+    padding: 10px;
+  }
+
+  .navbar ul.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+}
+
+@media (max-width: 480px) {
+  #card-container {
+    display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  #card {
+    flex-basis: calc(100% - 20px); /* For mobile, 1 card per row */
+  }
+
+  #count-card{
+    flex-basis: 100%;
+  }
+
+  #count-card img {
+    width: 80%;
+    height: 160px;
+    }
+
+    #input{
+      width: 80%;
+     left:6% ;
+    }
+
+    #Banner{
+      flex-direction: column;
+      height: 64vh;
+    }
+
+    .Banner-image{
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    .Banner-image img{
+      width: 100%;
+    }
+
+    .text h1{
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .text p{
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .text button{
+     width: 90%;
+     align-content: center;
+     margin-left: 6vw;
+    }
+
+    #card img{
+      width: 100%;
+    }
+
+    form {
+      
+      margin-left: 0%;
+     
+    }
+
+  }
+
+
