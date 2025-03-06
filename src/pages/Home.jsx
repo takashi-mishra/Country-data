@@ -21,7 +21,7 @@ const Home = ()=>{
                 </div>
         
                 <div className="Banner-image">
-                    <img src="../src/assets/tony-stark-removebg-preview.png" alt="image" />   
+                    <img src="/tony-stark-removebg-preview.png" alt="image" />   
                 </div>
         
               </div>
